@@ -8,11 +8,12 @@ const styles = StyleSheet.create({
     backgroundRest:{
         backgroundColor: '#000000',
         flex: 1,
+        justifyContent: 'center'
     },
     backgroundLogIn:{
       backgroundColor: '#000000',
       flex: 1,
-      justifyContent: 'space-evenly'
+      height: '100%'
   },
     inYellow: {
         backgroundColor: "#fff700",
@@ -36,7 +37,18 @@ const styles = StyleSheet.create({
         width: 200,
         marginBottom: 45,
         flex: 1, flexDirection: 'column', alignSelf: 'center', paddingTop: 10,
-
+      },
+      in: {
+        height: 65,
+        textAlign: "center",
+        width: "80%",
+        fontSize: 23,
+        marginTop: 34,
+        color: "#FFFFFF",
+        marginRight: 5,
+        marginLeft: 5,
+        marginBottom: 10
+        //"#FFCB1F"
       },
 })
 
