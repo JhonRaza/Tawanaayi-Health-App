@@ -30,7 +30,7 @@ export default class Home extends Component {
     const { navigate } = this.props.navigation;
     return (
       <ImageBackground
-        source={require("../../assets/img/Fitter - BG.png")}
+        source={require('../../assets/img/Fitter.png')}
         style={{ width: "100%", height: "100%" }}>
         <Text style={styles.TitleText}></Text>
         <View style={styles.container}>

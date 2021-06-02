@@ -7,64 +7,69 @@ export default function SignIn(props) {
     const [password, setPassword] = React.useState('')
 
     return (
-        <ScrollView contentContainerStyle={[styles.backgroundLogIn]}>
-            <Image source={require('../assets/Logo.png')} style={{ height: 80, width: 400, alignSelf: 'center', marginTop: 150 }}></Image>
-            <View style={{ flex: 0, flexDirection: 'row', alignItems: 'center', alignContent: 'center',justifyContent:'center', marginBottom: -20, paddingTop: 40 }}>
-                <Text style={{color: '#FFFFFF', fontSize: 25,  fontWeight: 400}}>
-                    Sign In
-                </Text>
+        <ScrollView contentContainerStyle={[styles.backgroundRest]}>
+        <Image source={require('../assets/Logo.png')} style={{ height: 80, width: 400, alignSelf: 'center', justifyContent: 'space-evenly', marginTop: 80, marginBottom: 30 }}></Image>
+        <View style={{ width: '70%', alignSelf: 'center' }}>
+            <Text style={{ marginTop: 10, color: '#FFFFFF', fontSize: 30, paddingTop: 20, fontWeight: '400' }}>
+                Sign In
+            </Text>
+            <Text style={{ marginTop: 10, color: '#FFFFFF', fontSize: 20, paddingTop: 30 }}>
+                Enter Email
+            </Text>
+            <TextInput style={{
+                height: 40,
+                borderColor: 'gray',
+                borderWidth: 1,
+                placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
+            }} placeholder="Insert your email!" />
+            <Text style={{ marginTop: 10, color: '#FFFFFF', fontSize: 20, paddingTop: 5 }}>
+                Enter Password
+            </Text>
+            <TextInput style={{
+                height: 40,
+                borderColor: 'gray',
+                borderWidth: 1,
+                placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
+            }} placeholder="Insert your password!" />
             </View>
-            {/* <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', paddingTop: 100 }}> */}
-                <View style={{ flex: 1, flexDirection: 'row', alignSelf: 'center', alignItems: 'center' }}>
-                    <Text style={{ color: '#FFFFFF' }}>Email</Text>
-                    <TextInput style={{
-                        height: 40,
-                        borderColor: 'gray',
-                        borderWidth: 1,
-                        placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, marginLeft: 20, width: 200
-                    }} placeholder="Insert your text!" onChangeText={text => setEmail(text)} />
-                </View>
             {/* </View> */}
-            {/* <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', paddingTop: 10 }}> */}
-                <View style={{ flex: 1, flexDirection: 'row', alignSelf: 'center', alignItems: 'center', marginTop: -150, marginLeft:-25 }}>
-                    <Text style={{ color: '#FFFFFF' }}>Password</Text>
-                    <TextInput style={{
-                        height: 40,
-                        borderColor: 'gray',
-                        borderWidth: 1,
-                        placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, marginLeft: 20, width: 200
-                    }} placeholder="Insert your text!" onChangeText={text => setPassword(text)}  secureTextEntry={true} />
-                </View>
-            {/* </View> */}
-            <View style={styles.intro}>
-            <TouchableOpacity onPress={()=>{
-                props.navigation.navigate('Main')
-            }}
-            //   onPress={() =>
-            //     this.props.navigation.navigate('Covid', {
-            //       userName: this.state.nu,
-            //       otherParam: '101'
-            //     })}
-               style={styles.inBlue}
-            ><Text style={{fontWeight: 'bold'}}>Login</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', paddingTop: 10 }}>
-            <TouchableOpacity style={{ flex: 0, flexDirection: 'row', alignItems: 'center', marginTop: -20 }}
-            onPress ={()=>{
-                props.navigation.navigate('SignUp'),
-                console.log(email),
-                console.log(password)
-            }}
-            //   onPress={() =>
-            //     this.props.navigation.navigate('Covid', {
-            //       userName: this.state.nu,
-            //       otherParam: '101'
-            //     })}
-            ><Text style={{fontWeight: 400, color: '#FFFFFF'}}>Don't have an account? Click here</Text>
-            </TouchableOpacity>
-          </View>
-
+            <View style={{ paddingTop: 40 }}>
+                <TouchableOpacity
+                    onPress={() => { props.navigation.navigate('Main') }}
+                    style={styles.inBlue}
+                ><Text style={{ fontWeight: 'bold' }}>Login</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', paddingTop: 10 }}>
+                <TouchableOpacity style={{ flex: 0, flexDirection: 'row', alignItems: 'center', marginTop: -20 }}
+                    onPress={() => {
+                        props.navigation.navigate('SignUp'),
+                            console.log(email),
+                            console.log(password)
+                    }}
+                //   onPress={() =>
+                //     this.props.navigation.navigate('Covid', {
+                //       userName: this.state.nu,
+                //       otherParam: '101'
+                //     })}
+                ><Text style={{ fontWeight: 400, color: '#FFFFFF' }}>Don't have an account? Click here</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', paddingTop: 10 }}>
+                <TouchableOpacity style={{ flex: 0, flexDirection: 'row', alignItems: 'center', marginTop: -20 }}
+                    onPress={() => {
+                        props.navigation.navigate('Forgot'),
+                            console.log(email),
+                            console.log(password)
+                    }}
+                //   onPress={() =>
+                //     this.props.navigation.navigate('Covid', {
+                //       userName: this.state.nu,
+                //       otherParam: '101'
+                //     })}
+                ><Text style={{ fontWeight: 400, color: '#FFFFFF' }}>Forgot Password? Click here</Text>
+                </TouchableOpacity>
+            </View>
 
 
         </ScrollView>

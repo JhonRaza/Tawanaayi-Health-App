@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button, ActivityIndicator } from 'react-native';
-import BMI from './Screens/BMI/BMI';
+import BMI from './Screens/BMI';
+import BMR from './Screens/BMR';
 import Home from './Screens/Home/Home';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
@@ -16,6 +17,7 @@ import  Landing  from './Screens/Landing'
 //import  Home  from './Screens/Home/Home'
 import  Profile  from './Screens/Profile/Profile'
 import SplashScreen from './Screens/SplashScreen'
+import ForgotPassword from './Screens/ForgotPassword';
 
 const Tab = createBottomTabNavigator();
 export class App extends Component {
@@ -76,10 +78,13 @@ export class App extends Component {
         {/* used this for state management ac = {this.logChange()} */}
         <Stack.Screen name="SignUp" component={signUpScreen} options={{headerShown:false}} />
           <Stack.Screen name="SignIn" ac = {this.logChange()} component={signInScreen} options={{headerShown:false}} />
+          <Stack.Screen name="Forgot" component={ForgotPassword} options={{headerShown:false}} />
           {/* use header shown false for home screen in same screen */}
           {this.state.logged?(<Stack.Screen name="Main" component={Main} options={{headerShown:false}} />): null}
           {this.state.logged?(<Stack.Screen name="Home" component={Home} options={{headerShown:false}} />): null}
           {this.state.logged?(<Stack.Screen name="Profile" component={Profile} options={{headerShown:false}} />): null}
+          <Stack.Screen name="BMI" component={BMI} options={{headerShown:true}} />
+          <Stack.Screen name="BMR" component={BMR} options={{headerShown:true}} />
 
           </Stack.Navigator>
           </NavigationContainer>
