@@ -7,7 +7,6 @@ import Home from './Screens/Home/Home';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
 const Stack = createStackNavigator();
-import Covid from './Screens/CovidAPI/Covid'
 import { Main } from './Screens/Main'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import  AuthContext  from './components/context'

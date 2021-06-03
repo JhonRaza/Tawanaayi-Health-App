@@ -2,8 +2,6 @@ import React, { Component } from 'react'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 const Tab = createMaterialBottomTabNavigator();
-import signInScreen from './SignIn/signIn'
-import signUpScreen from './SignUp/signUp'
 import { Button, View, Text } from 'react-native';
 
 
