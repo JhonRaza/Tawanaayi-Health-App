@@ -19,7 +19,7 @@ export class Main extends Component {
                 <Tab.Screen name="Profile" component={Profile} navigation={this.props.navigation}
                     options={{
                         tabBarIcon: ({ color, size }) => (
-                            <MaterialCommunityIcons name="user" color={color} size={26} />
+                            <MaterialCommunityIcons name="account" color={color} size={26} />
                         ),
                         headerShown: false
                     }} />

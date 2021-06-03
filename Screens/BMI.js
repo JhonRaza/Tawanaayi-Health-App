@@ -8,6 +8,7 @@ const BMI = () => {
     const [heightinches, setInches] = React.useState(0);
     const [heightM, setMeters] = React.useState(heightfeet + heightinches)
     const [mass, setMass] = React.useState(0);
+    const [time, setTime] = React.useState('') //set the timestamp for the calculation
     //const [bmi, setBMI] = React.useState(mass/(heightM**2))
     return (
         <ScrollView contentContainerStyle={[styles.backgroundRest]}>
@@ -51,7 +52,7 @@ const BMI = () => {
                         </TextInput>
                     </View><View style={{ paddingTop: 40 }}>
                         <TouchableOpacity
-                            // onPress = {} calculate the BMI value
+                            // onPress = {} calculate the BMI value and set the time and save into the DB
                             style={styles.inYellow}
                         ><Text style={{ fontWeight: 'bold' }}>Calculate</Text>
                         </TouchableOpacity>

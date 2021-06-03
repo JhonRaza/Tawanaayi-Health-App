@@ -1,10 +1,11 @@
 import React, { Component, } from 'react'
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button, TouchableOpacity, ImageBackground } from 'react-native';
-import BMI from '../BMI/BMI';
+import { StyleSheet, Text, View, Button, TouchableOpacity, ImageBackground, ScrollView, Image } from 'react-native';
 import generalStyle from '../../genStyles.js'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import styles from '../../assets/styles'
+
 const Tab = createBottomTabNavigator();
 
 
@@ -29,12 +30,11 @@ export default class Home extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <ImageBackground
-        source={require('../../assets/img/Fitter.png')}
-        style={{ width: "100%", height: "100%" }}>
-        <Text style={styles.TitleText}></Text>
-        <View style={styles.container}>
-          <View style={styles.intro}>
+      <ScrollView contentContainerStyle={[styles.backgroundRest]}>
+      <Image source={require('../../assets/Logo.png')} style={{ height: 80, width: 400, alignSelf: 'center', justifyContent: 'space-evenly', marginTop: -80, marginBottom: 90 }} />
+      <View style={{ width: '70%', alignSelf: 'center' }}>
+      
+          <View style={{paddingTop: -230}}>
             <TouchableOpacity
               title="BMI"
               // color="#00B0FF"  
@@ -45,75 +45,24 @@ export default class Home extends Component {
               color='green'
             ><Text>BMI</Text>
             </TouchableOpacity></View>
-          <View style={styles.intro}>
-            <TouchableOpacity
-              title="Random User API"
-              // color="#00B0FF"  
-              onPress={() =>
-                this.props.navigation.navigate('Covid', {
-                  userName: this.state.nu,
-                  otherParam: '101'
-                })
-              } style={styles.inBlue}
-            ><Text>CORONA/CALORIES</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.intro}>
+            <View style={styles.intro}>
             <TouchableOpacity
               title="BMI"
               // color="#00B0FF"  
               onPress={() =>
-                this.props.navigation.navigate('signIn', {
-                })
-              } style={styles.inYellow}
-              color='green'
-            ><Text>BMI</Text>
-            </TouchableOpacity></View>
-          <View style={styles.intro}>
-            <TouchableOpacity
-              title="Random User API"
-              // color="#00B0FF"  
-              onPress={() =>
-                this.props.navigation.navigate('signUp', {
-                  userName: this.state.nu,
-                  otherParam: '101'
+                this.props.navigation.navigate('BMR', {
                 })
               } style={styles.inBlue}
-            ><Text>CORONA/CALORIES</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.intro}>
-            <TouchableOpacity
-              title="BMI"
-              // color="#00B0FF"  
-              onPress={() =>
-                this.props.navigation.navigate('BMI', {
-                })
-              } style={styles.inYellow}
               color='green'
-            ><Text>BMI</Text>
+            ><Text>BMR</Text>
             </TouchableOpacity></View>
-          <View style={styles.intro}>
-            <TouchableOpacity
-              title="Random User API"
-              // color="#00B0FF"  
-              onPress={() =>
-                this.props.navigation.navigate('Covid', {
-                  userName: this.state.nu,
-                  otherParam: '101'
-                })
-              } style={styles.inBlue}
-            ><Text>CORONA/CALORIES</Text>
-            </TouchableOpacity>
-          </View>
+            </View>
           {/*BMI(this.state.nu) THIS IS HOW YOU CALL A FUNCTIONAL COMPONENT WITH PROPS PASSED*/}
-        </View>
-
-      </ImageBackground>
+        </ScrollView>
     )
   }
 }
-const styles = StyleSheet.create({
+const styles1 = StyleSheet.create({
   navPage: {
     flex: 1,
     backgroundColor: '#000000',

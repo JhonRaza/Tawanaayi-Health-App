@@ -1,30 +1,25 @@
-import React, { Component } from 'react'
-import axios from 'axios';
-import { View, Text } from 'react-native';
+import React from 'react'
+import { View, Text, ScrollView, Image } from 'react-native'
+import styles from '../../assets/styles'
+export default function Profile() {
+  //add context to get the user details here
+  const name = ''
+  const bmiLogs = []
+  const bmrLogs = []
 
-
-const profileAPI = async function(url, data){
-    axios.post(url, data)
-    .then(data => {
-      console.log(data)
-    })
-    .catch(err=>{
-      console.log(err)
-    })
-  }
-export class Profile extends Component {
-    render() {
-        return (
-            // <div>
-            //     {/* {profileAPI('http://192.168.90.1:3000/profile')} */}
-            // </div>
-            <View>
-              <Text>
-                UFUEFDIni
-              </Text>
-            </View>
-        )
-    }
+  return (
+      <ScrollView contentContainerStyle={{backgroundColor: '#000000',
+      flex: 1,
+      justifyContent: 'center',flexGrow: 1, height: '100%'}}>
+        <View style={{ width: '70%', alignSelf: 'center', height: '100%' }}>
+          <Image source={require('../../assets/Logo.png')} style={{ height: 80, width: 400, alignSelf: 'center', justifyContent: 'space-evenly', marginTop: 40, marginBottom: 10 }}></Image>
+          <View>
+            <Text style={{ marginTop: 5, color: '#FFFFFF', fontSize: 40, paddingTop: 10, fontWeight: '400', alignSelf: 'center' }}>
+              name
+           </Text>
+           {/* here, we want to map the logs */}
+          </View>
+        </View>
+      </ScrollView>
+  )
 }
-
-export default Profile

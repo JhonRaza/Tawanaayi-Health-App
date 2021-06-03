@@ -10,6 +10,12 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center'
     },
+    backgroundProfile:{
+      backgroundColor: '#000000',
+      flex: 1,
+      justifyContent: 'center',
+      height: '100%'
+  },
     backgroundLogIn:{
       backgroundColor: '#000000',
       flex: 1,
