@@ -101,7 +101,7 @@ export default function Profile() {
           </Text>
 
           <Text style={{ color: '#FFFFFF', paddingLeft: '10%', fontSize: 28, paddingTop: 40, paddingBottom: 5, fontWeight: '300' }}>
-            BMR Logs
+            BMR Logs*
            </Text>
           <FlatList
             data={DATA}
