@@ -78,7 +78,7 @@ export default function Profile() {
             Jhon Raza
            </Text>
           <View style={{ flexDirection: 'row', justifyContent: 'center' }}>
-            <Text style={{ fontFamily: "sans-serif", marginTop: 5, color: '#f5f5f5', fontSize: 15, paddingTop: 10, fontWeight: '50', alignSelf: 'center', paddingRight: 15 }}>
+            <Text style={{ fontFamily: "sans-serif", marginTop: 5, color: '#f5f5f5', fontSize: 15, paddingTop: 10, fontWeight: '50', alignSelf: 'center', paddingRight: 15, borderColor:'#FFFFFF' }}>
               {gender}
             </Text>
             <Text style={{ marginTop: 5, color: '#f5f5f5', fontSize: 15, paddingTop: 10, fontWeight: '50', alignSelf: 'center', paddingLeft: 15 }}>

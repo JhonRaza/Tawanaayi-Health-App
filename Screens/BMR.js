@@ -53,13 +53,13 @@ const BMR = () => {
                         <TouchableOpacity
                             // onPress = {} calculate the BMI value and set the time and save into the DB
                             style={styles.inBlue}
-                        ><Text style={{ fontWeight: 'bold' }}>Calculate</Text>
+                        ><Text style={{  }}>Calculate</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
 
                 {/* <Text style={{ marginTop: 10, color: '#FFCB1F', fontSize: 40, paddingTop: 20, fontWeight: '400', alignSelf: 'center' }}>
-               {(bmi !== NaN) ? (bmi.toString()) : null}
+               {(bmi !== NaN) ? (bmi.toString()) : null}fontWeight: 'bold'
            </Text> */}
             </View>
         </ScrollView>

@@ -20,7 +20,7 @@ export default function SignIn(props) {
                 height: 40,
                 borderColor: 'gray',
                 borderWidth: 1,
-                placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
+                backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
             }} placeholder="Insert your email!" />
             <Text style={{ marginTop: 10, color: '#FFFFFF', fontSize: 20, paddingTop: 5 }}>
                 Enter Password
@@ -29,7 +29,7 @@ export default function SignIn(props) {
                 height: 40,
                 borderColor: 'gray',
                 borderWidth: 1,
-                placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
+                backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
             }} placeholder="Insert your password!" />
             </View>
             {/* </View> */}
@@ -37,7 +37,7 @@ export default function SignIn(props) {
                 <TouchableOpacity
                     onPress={() => { props.navigation.navigate('Main') }}
                     style={styles.inBlue}
-                ><Text style={{ fontWeight: 'bold' }}>Login</Text>
+                ><Text style={{  }}>Login</Text>
                 </TouchableOpacity>
             </View>
             <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', paddingTop: 10 }}>
@@ -50,9 +50,9 @@ export default function SignIn(props) {
                 //   onPress={() =>
                 //     this.props.navigation.navigate('Covid', {
                 //       userName: this.state.nu,
-                //       otherParam: '101'
+                //       otherParam: '101'fontWeight: 'bold'fontWeight: 400, fontWeight: 400, 
                 //     })}
-                ><Text style={{ fontWeight: 400, color: '#FFFFFF' }}>Don't have an account? Click here</Text>
+                ><Text style={{ color: '#FFFFFF' }}>Don't have an account? Click here</Text>
                 </TouchableOpacity>
             </View>
             <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', paddingTop: 10 }}>
@@ -67,7 +67,7 @@ export default function SignIn(props) {
                 //       userName: this.state.nu,
                 //       otherParam: '101'
                 //     })}
-                ><Text style={{ fontWeight: 400, color: '#FFFFFF' }}>Forgot Password? Click here</Text>
+                ><Text style={{ color: '#FFFFFF' }}>Forgot Password? Click here</Text>
                 </TouchableOpacity>
             </View>
 

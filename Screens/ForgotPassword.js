@@ -17,7 +17,7 @@ export default function ForgotPassword(props) {
                     height: 40,
                     borderColor: 'gray',
                     borderWidth: 1,
-                    placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
+                    backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
                 }} placeholder="Insert your email!" />
                 <Text style={{ marginTop: 10, color: '#FFFFFF', fontSize: 20, paddingTop: 5 }}>
                     Enter New Password
@@ -26,7 +26,7 @@ export default function ForgotPassword(props) {
                     height: 40,
                     borderColor: 'gray',
                     borderWidth: 1,
-                    placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
+                    backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
                 }} placeholder="Insert your password!" />
                 <Text style={{ marginTop: 10, color: '#FFFFFF', fontSize: 20, paddingTop: 5 }}>
                     Re-Enter New Password
@@ -35,16 +35,17 @@ export default function ForgotPassword(props) {
                     height: 40,
                     borderColor: 'gray',
                     borderWidth: 1,
-                    placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
+                    backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
                 }} placeholder="Insert your password again!" />
                 <View style={{paddingTop: 40}}>
                 <TouchableOpacity
                     onPress={()=>{props.navigation.navigate('SignIn')}}
                     style={styles.inYellow}
-                ><Text style={{ fontWeight: 'bold' }}>Change Password</Text>
+                ><Text style={{  }}>Change Password</Text>
                 </TouchableOpacity>
                 </View>
             </View>
         </ScrollView>
     )
 }
+// fontWeight: 'bold'

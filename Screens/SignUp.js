@@ -82,7 +82,7 @@ export default function SignUp(props) {
                     height: 40,
                     borderColor: 'gray',
                     borderWidth: 1,
-                    placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
+                    backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
                 }} placeholder="Insert your full name!" onChangeText={(text) => { setName(text) }} />
                 <Text style={{ marginTop: 10, color: '#FFFFFF', fontSize: 20, paddingTop: 5 }}>
                     Enter Email
@@ -91,7 +91,7 @@ export default function SignUp(props) {
                     height: 40,
                     borderColor: 'gray',
                     borderWidth: 1,
-                    placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
+                    backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
                 }} placeholder="Insert your email!" onChangeText={(text) => { setEmail(text) }} />
                 <Text style={{ marginTop: 10, color: '#FFFFFF', fontSize: 20, paddingTop: 5 }}>
                     Enter Password
@@ -100,7 +100,7 @@ export default function SignUp(props) {
                     height: 40,
                     borderColor: 'gray',
                     borderWidth: 1,
-                    placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
+                    backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
                 }} placeholder="Insert your password!" secureTextEntry={true} onChangeText={(text) => { setPassword(text) }} />
                 <Text style={{ marginTop: 10, color: '#FFFFFF', fontSize: 20, paddingTop: 5 }}>
                     Gender
@@ -122,14 +122,14 @@ export default function SignUp(props) {
                     height: 40,
                     borderColor: 'gray',
                     borderWidth: 1,
-                    placeholderTextColor: 'gray', backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
+                    backgroundColor: '#DDDDDD', borderRadius: 10, padding: 4, width: 300
                 }} placeholder="Insert your Date of Birth: YYYY-MM-DD" onChangeText={(text) => { setDate(text) }} />
             </View>
             <View style={{ paddingTop: 40 }}>
                 <TouchableOpacity
                     onPress={checkTextInput}
                     style={styles.inYellow}
-                ><Text style={{ fontWeight: 'bold' }}>Create account</Text>
+                ><Text style={{  }}>Create account</Text>
                 </TouchableOpacity>
             </View>
 
@@ -140,10 +140,10 @@ export default function SignUp(props) {
                     }}
                 //   onPress={() =>
                 //     this.props.navigation.navigate('Covid', {
-                //       userName: this.state.nu,
+                //       userName: this.state.nu,fontWeight: 'bold'fontWeight: 400, 
                 //       otherParam: '101'
                 //     })}
-                ><Text style={{ fontWeight: 400, color: '#FFFFFF' }}>Already have an account? Click here</Text>
+                ><Text style={{ color: '#FFFFFF' }}>Already have an account? Click here</Text>
                 </TouchableOpacity>
             </View>
 
